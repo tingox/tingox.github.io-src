@@ -1,5 +1,5 @@
 Title: Pelican on Windows
-Slug: -pelican-on-windows- 
+Slug: pelican-on-windows 
 Date: 2018-02-12 16:15:01
 Category: Blog
 
