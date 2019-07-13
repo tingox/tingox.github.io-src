@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python3.6
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
@@ -10,13 +10,14 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://tingox.github.io'
+# If your site is available via HTTPS, make sure SITEURL begins with https://
+SITEURL = ''
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
-DELETE_OUTPUT_DIRECTORY = False
+DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 

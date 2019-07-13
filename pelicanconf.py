@@ -1,16 +1,16 @@
+#!/usr/local/bin/python3.6
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Torfinn Ingolfsen'
-SITENAME = u'Just a blog'
+AUTHOR = 'Torfinn Ingolfsen'
+SITENAME = 'Just a blog'
 SITEURL = ''
 
 PATH = 'content'
 
 TIMEZONE = 'Europe/Oslo'
 
-DEFAULT_LANG = u'en'
-DEFAULT_CATEGORY = u'Blog'
+DEFAULT_LANG = 'English'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -23,11 +23,11 @@ AUTHOR_FEED_RSS = None
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('tingox on Google Sites', 'https://sites.google.com/site/tingox/'),)
+         ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('Google+', 'https://plus.google.com/108051455536264011267'),
-          ('LinkedIn profile', 'https://www.linkedin.com/in/torfinn-ingolfsen-9816a93/'),)
+SOCIAL = (('You can add links in your config file', '#'),
+          ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 20
 
