@@ -4,3 +4,8 @@ Date: 2019-07-13 16:21:12
 Category: Blog
 
 Long time since I posted here. Time has passed, and now Pelican 4.0.1 is out, I installed that on my new workstation (along with a few other missing tools). That's all.
+
+Ok, it seems I managed to break it again. Will this change fix anything?
+
+As it turns out, using `git submodule update` isn't wise. Atleast until you have fixed your submodule setup so
+the submodule tracks the correct branch of that repository. Oh well, I learned something.
