@@ -23,10 +23,10 @@ AUTHOR_FEED_RSS = None
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+         ('Torfinn @heim', 'http://heim.bitraf.no/tingo/'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
+SOCIAL = (('LinkedIn profile', 'https://www.linkedin.com/in/torfinn-ingolfsen-9816a93/'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 20
