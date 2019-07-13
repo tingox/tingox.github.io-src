@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Torfinn Ingolfsen'
 SITENAME = 'Just a blog'
-SITEURL = ''
+SITEURL = 'https://tingox.github.io'
 
 PATH = 'content'
 
