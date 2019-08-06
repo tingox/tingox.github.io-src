@@ -7,6 +7,10 @@ The article [Run your own social](https://runyourown.social/) which I found via 
 
 One of the sources / inspirations is the [Local-first software][2] article. The authors have built some interesting prototypes based on conflict-free replicated datatype or [CRDT][3] that shows that distributed tools are possible without using hosted or centralized servers.
 
+2019-08-06 update: [Freedombone][4] and [YunoHost][5] also looks interesting. I should check them out when I find free time for it.
+
 [1]: https://boingboing.net/2019/07/12/roll-your-own.html
 [2]: https://www.inkandswitch.com/local-first.html
 [3]: https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type
+[4]: https://freedombone.net/
+[5]: https://yunohost.org/
