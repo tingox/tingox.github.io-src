@@ -8,6 +8,8 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
+OUTPUT_RETENTION = [".git"]
+
 GITHUB_PAGES_BRANCH=master
 
 PAGESDIR=$(INPUTDIR)/pages
