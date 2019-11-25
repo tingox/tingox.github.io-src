@@ -7,6 +7,9 @@ INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+#THEME=/usr/lib/python3/dist-packages/pelican/themes/simple
+#THEME=../pelican-themes/mnmlist
+THEME=../pelican-themes/tuxlite_tbs
 
 OUTPUT_RETENTION = [".git"]
 
@@ -51,20 +54,20 @@ help:
 	@echo '                                                                          '
 
 html:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) -t ${THEME} $(PELICANOPTS)
 
 clean:
 	#[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
-	$(PELICAN) -d
+	$(PELICAN) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -d
 
 regenerate:
-	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) -t ${THEME} $(PELICANOPTS)
 
 serve:
 ifdef PORT
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
+	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) -t ${THEME} $(PELICANOPTS) -p $(PORT)
 else
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) -t ${THEME} $(PELICANOPTS)
 endif
 
 serve-global:
@@ -77,13 +80,13 @@ endif
 
 devserver:
 ifdef PORT
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
+	$(PELICAN) --listen --relative-urls $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) -t ${THEME} $(PELICANOPTS) -p $(PORT)
 else
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	$(PELICAN) --listen --relative-urls $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) -t ${THEME} $(PELICANOPTS)
 endif
 
 publish:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) -t ${THEME} $(PELICANOPTS)
 
 github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
