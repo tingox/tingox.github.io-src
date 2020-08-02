@@ -1,20 +1,21 @@
 Title: FreeBSD with Debian vm for wireless network
 Slug: freebsd-with-debian-vm-for-wireless-network
 Date: 2020-08-02 16:22:58
+Tags: freebsd, bhyve, vm, debian, wireless
 Category: Blog
 
-New hardware doesn't always have working drivers in FreeBSD. The developers do a great job, but there are not enough of them. 
+New hardware doesn't always have working drivers in [FreeBSD](https://www.freebsd.org/). The developers do a great job, but there are not enough of them. 
 On the other side, it seems like hardware companies pour out an endless stream of new hardware every month.
 
-I wanted to see if I could use a Debian virtual machine (vm) as a guest on the FreeBSD host to fix the "unsupported wifi in FreeBSD" problem.
-FreeBSD has great support for runnng virtual machines through [bhyve](https://bhyve.org/). And almost all newer machines has the necessary hardware support
+I wanted to see if I could use a [Debian](https://www.debian.org/) virtual machine (vm) as a guest on the FreeBSD host to fix the "unsupported wifi in FreeBSD" problem.
+FreeBSD has great support for running virtual machines through [bhyve](https://bhyve.org/). And almost all newer machines has the necessary hardware support
 for running virtual machines.
 
-So I bought a cheap laptop on a summer outlet sale on one of the online shops here in Norway. For NOK 1997.- (which is about USD 220.- at the current exchange
+So I bought a cheap laptop on a summer outlet sale from one of the online shops here in Norway. For NOK 1997.- (which is about USD 220.- at the current exchange
  rate) I got an "as new, in original box" [Lenovo ideapad 530S-14ARR](https://psref.lenovo.com/Detail/Lenovo%20Laptops/ideapad_530S_14_AMD?M=81H10000MX) with AMD Ryzen 3 2200U cpu,
 4 GB memory and 128 GB SSD. The integrated graphics is AMD Radeon Vega 3, I was unsure if it was supported but it didn't matter for this experiment. I was pretty sure the wireless
 adapter / chipset was not supported, even if the description was a bit vague "11ac, 1x1, Wi-Fi + Bluetooth combo adapter" - many newer laptops have Broadcom wireless and that currently 
-has limited support in FreeBSD.
+has limited support in FreeBSD. Qualcomm support is almost non-existent.
 
 There is one initial hurdle to overcome when installing and configuring FreeBSD (and Debian too) today: most install methods are set up for a network install. It is possible to install either
 without a working network, but it is just harder (I should note that the install itself isn't the hardest part, but adding packages you need after the install is finished is). So I 
